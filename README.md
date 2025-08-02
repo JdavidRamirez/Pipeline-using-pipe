@@ -2,9 +2,19 @@
 
 ##  Introduction
 
-This project demonstrates how to build a clean, modular, and readable data transformation pipeline in Python using the `toolz.pipe()` function. Inspired by a blog post discussing the benefits of function pipelines, I wanted to explore how `pipe()` can help structure data cleaning code in a more elegant and functional way.
+This project shows how to build a simple and readable data transformation pipeline in Python using the toolz.pipe() function. I read a blog post that explained the benefits of function pipelines and wanted to try it out. The goal is to see how pipe() helps organize each step in the cleaning process.
 
-The pipeline is designed to clean and enrich a dataset containing chemical compound measurements.
+The code includes three basic tasks:
+
+* Drop an unnecessary column.
+
+* Convert strings to numbers.
+
+* Label numeric values as "high" or "moderate" based on the column mean.
+
+The logic is simple, but pipe() helps keep the steps clean and easy to follow.
+
+**Note:** While this example is basic, I used pipe() for practice and to show how it can improve clarity in small projects.
 
 ---
 
@@ -18,23 +28,21 @@ The dataset includes the concentration of various ions (e.g., Ca²⁺, Mg²⁺, 
 
 ##  Pipeline Steps
 
-The pipeline follows these main steps:
+1. Drop a column
+Remove the column named "n" as it's not useful for the analysis.
 
-1. **Remove unnecessary column** `n`.
-2. **Convert object-type columns** to `float`, taking care of commas as decimal separators.
-3. **Create new label columns** (e.g., `Ca2+_concentration`) to classify values as `"high"` or `"moderate"` based on the column mean.
+2. Convert data types
+Convert all columns with object (string) type to float, replacing commas with dots to handle decimal formatting.
 
-All of this is handled using the `toolz.pipe()` function to promote:
--  **Readability** (linear, easy-to-follow transformations)
--  **Modularity** (each transformation is clearly separated)
--  **Clean code structure** (no intermediate variables)
+3. Label values
+Create new columns that label each value as "high" if it’s above the column mean or "moderate" otherwise.
+
 
 ---
 
 ## Conclusion:
 
-This project shows how pipe() helps organize data steps in a clear way. The code stays simple and easy to follow. While this example is basic, the structure works well for larger tasks. Using pipe() can make your data work more readable and easier to manage.
-
+This project highlights how pipe() can help structure data processing tasks. The steps are easier to follow, and the code remains clean. Even though the example is simple, this method scales well for larger projects and encourages better code organization.
 
 
 
