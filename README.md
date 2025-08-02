@@ -11,11 +11,6 @@ The code includes three basic tasks:
 * Convert strings to numbers.
 
 * Label numeric values as "high" or "moderate" based on the column mean.
-
-The logic is simple, but pipe() helps keep the steps clean and easy to follow.
-
-**Note:** While this example is basic, I used pipe() for practice and to show how it can improve clarity in small projects.
-
 ---
 
 ##  Dataset
