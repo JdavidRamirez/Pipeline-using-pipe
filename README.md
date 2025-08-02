@@ -31,4 +31,13 @@ All of this is handled using the `toolz.pipe()` function to promote:
 
 ---
 
+## Conclusion:
+
+This project shows how pipe() helps organize data steps in a clear way. The code stays simple and easy to follow. While this example is basic, the structure works well for larger tasks. Using pipe() can make your data work more readable and easier to manage.
+
+
+
+
+
+
 
